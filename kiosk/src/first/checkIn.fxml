@@ -6,31 +6,36 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="first.CheckInController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="first.CheckInController">
    <children>
-      <Button fx:id="checkin" layoutX="89.0" layoutY="241.0" mnemonicParsing="false" onAction="#checkInclicked" prefHeight="91.0" prefWidth="171.0" style="-fx-background-color: beige;" text="체크인">
+      <Button fx:id="checkin" layoutX="89.0" layoutY="301.0" mnemonicParsing="false" onAction="#checkInclicked" prefHeight="91.0" prefWidth="171.0" style="-fx-background-color: #edead7;" text="체크인">
          <font>
             <Font name="BM DoHyeon" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="340.0" layoutY="241.0" mnemonicParsing="false" onAction="#cancelclicked" prefHeight="91.0" prefWidth="171.0" style="-fx-background-color: beige;" text="체크인 취소">
+      <Button layoutX="340.0" layoutY="301.0" mnemonicParsing="false" onAction="#cancelclicked" prefHeight="91.0" prefWidth="171.0" style="-fx-background-color: #edead7;" text="체크인 취소">
          <font>
             <Font name="BM DoHyeon" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="175.0" layoutY="416.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: skyblue;" text="한국어">
+      <Button layoutX="175.0" layoutY="458.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: gray;" text="한국어">
          <font>
             <Font name="BM DoHyeon" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="308.0" layoutY="416.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: skyblue;" text="English">
+      <Button layoutX="308.0" layoutY="458.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: gray;" text="English">
          <font>
             <Font name="BM DoHyeon" size="20.0" />
          </font>
       </Button>
-      <ImageView onMouseClicked="#managerLogin" fitHeight="64.0" fitWidth="58.0" layoutX="538.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="64.0" fitWidth="58.0" layoutX="538.0" layoutY="638.0" onMouseClicked="#managerLogin" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resource/icon/setting.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="202.0" layoutX="199.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/hotel.png" />
          </image>
       </ImageView>
    </children>
