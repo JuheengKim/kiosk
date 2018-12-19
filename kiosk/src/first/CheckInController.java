@@ -296,7 +296,7 @@ public class CheckInController {
 		
 		if(phoneNum_switch == false)
 		{
-            String alertStr = "휴대폰 번호를 입력하세요!";
+            String alertStr = "휴대폰 번호를 입력하세요!!!";
             Alert alert = new Alert(AlertType.ERROR);
             alert.setContentText(alertStr);
             alert.showAndWait();
@@ -312,7 +312,7 @@ public class CheckInController {
 		    //공백 체크
 		    if(phoneNum.getText().length() == 0)
 		    {
-		          String alertStr = "연락처를 입력해주세요!";
+		          String alertStr = "연락처를 입력해주세요!!!";
 		          Alert alert = new Alert(AlertType.INFORMATION);
 		          alert.setHeaderText(phoneNum.getText());
 		          alert.setContentText(alertStr);
