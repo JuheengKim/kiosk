@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="third.CancelController">
+   <children>
+      <ImageView fitHeight="113.0" fitWidth="152.0" layoutX="31.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="65.0" prefHeight="57.0" prefWidth="571.0" text="체크인 정보" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="24.0" />
+         </font>
+      </Label>
+      <Label prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #485E6C;" text=" 체크인 취소 화면" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="151.0" text="Guest:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="25.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/icons8-customer-96.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="uname" layoutX="127.0" layoutY="151.0" text="000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="25.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/calendar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="199.0" text="Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="indate" layoutX="127.0" layoutY="199.0" text="00000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="outdate" layoutX="231.0" layoutY="199.0" text="00000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="199.0" text="~">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="25.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/room.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="249.0" text="Room:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomNum" layoutX="127.0" layoutY="249.0" text="00000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="350.0" prefHeight="57.0" prefWidth="571.0" text="결제 정보" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="414.0" text="type:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="29.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/type.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="ptype" layoutX="131.0" layoutY="414.0" text="000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="470.0" text="내신 금액:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="29.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/bill.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="tot" layoutX="158.0" layoutY="470.0" text="000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="347.0" layoutY="632.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: beige;" text="체크인취소">
+         <font>
+            <Font name="BM DoHyeon" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="481.0" layoutY="632.0" mnemonicParsing="false" onAction="#backMain" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: beige;" text="돌아가기">
+         <font>
+            <Font name="BM DoHyeon" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

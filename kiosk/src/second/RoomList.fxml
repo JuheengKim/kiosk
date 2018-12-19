@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" stylesheets="@sy.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="second.RoomListController">
+   <children>
+      <Label layoutX="15.0" layoutY="28.0" prefHeight="41.0" prefWidth="530.0" text="Room List" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="36.0" />
+         </font>
+      </Label>
+      <ToolBar fx:id="toolbar" layoutX="10.0" layoutY="88.0" prefHeight="40.0" prefWidth="589.0" style="-fx-background-color: rosyBrown;">
+         <items>
+            <Button id="1" mnemonicParsing="false" onAction="#roomTypeChange" style="-fx-background-color: #485E6C;" text="싱글룸" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="2" mnemonicParsing="false" onAction="#roomTypeChange" text="더블룸">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="3" mnemonicParsing="false" onAction="#roomTypeChange" text="패밀리룸">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="4" mnemonicParsing="false" onAction="#roomTypeChange" text="스위트룸">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </items>
+      </ToolBar>
+      <Pagination fx:id="pagination" focusTraversable="false" layoutX="-1.0" layoutY="126.0" prefHeight="349.0" prefWidth="600.0" />
+      <GridPane layoutX="15.0" layoutY="525.0" prefHeight="80.0" prefWidth="572.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.59998474121096" minWidth="10.0" prefWidth="237.8000030517578" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.0" minWidth="10.0" prefWidth="63.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.20001220703125" minWidth="10.0" prefWidth="74.59996337890624" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.2000122070313" minWidth="10.0" prefWidth="130.00003662109378" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="22.0" prefWidth="234.0" text="방 정보" textFill="WHITE">
+               <font>
+                  <Font name="BM DoHyeon" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="63.0" text="인원" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="BM DoHyeon" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="숙박일수" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="BM DoHyeon" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="127.0" text="가격" textFill="WHITE" GridPane.columnIndex="5">
+               <font>
+                  <Font name="BM DoHyeon" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="roomName" prefHeight="30.0" prefWidth="262.0" text="" textFill="WHITE" GridPane.rowIndex="1" />
+            <Label fx:id="numberOf" alignment="CENTER" prefHeight="30.0" prefWidth="63.0" text="1명" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="stay" prefHeight="40.0" prefWidth="36.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="totPrice" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="126.0" text="0 원" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#minusStay" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../resource/icon/icons8-minus-96.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#plusStay" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../resource/icon/icons8-plus-480.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Button layoutX="485.0" layoutY="646.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: beige;" text="취소">
+         <font>
+            <Font name="BM DoHyeon" size="18.0" />
+         </font></Button>
+      <Button fx:id="payBtn" layoutX="373.0" layoutY="646.0" mnemonicParsing="false" onAction="#goPay" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: beige;" text="결제하기">
+         <font>
+            <Font name="BM DoHyeon" size="18.0" />
+         </font></Button>
+   </children>
+</Pane>

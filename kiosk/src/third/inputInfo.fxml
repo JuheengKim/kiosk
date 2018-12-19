@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="third.CancelController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="110.0" layoutY="189.0" prefHeight="57.0" prefWidth="381.0" style="-fx-background-color: beige;" text=" 카드키" textAlignment="CENTER">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="key" alignment="CENTER" layoutX="213.0" layoutY="188.0" prefHeight="48.0" prefWidth="278.0">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="113.0" fitWidth="152.0" layoutX="31.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="114.0" prefHeight="57.0" prefWidth="571.0" text="받으신 카드키를 입력해 주세요!" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="499.0" layoutY="609.0" onMouseClicked="#showReserInfo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/next.png" />
+         </image>
+      </ImageView>
+      <Button contentDisplay="CENTER" layoutX="51.0" layoutY="628.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backMain" pickOnBounds="false" prefHeight="40.0" prefWidth="46.0" style="-fx-background-color: beige;" text="완료" textAlignment="CENTER">
+         <font>
+            <Font name="BM DoHyeon" size="1.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="78.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resource/icon/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="200.0" layoutY="298.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="200.0" style="-fx-background-color: gray;">
+         <children>
+            <Button layoutX="3.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="1">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="75.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="2">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="147.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="3">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="3.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="4">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="75.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="5">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="147.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="6">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="3.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="7">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="75.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="8">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="147.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="9">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="3.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#processNum" prefHeight="40.0" prefWidth="50.0" text="0">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="75.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eraseNumber" prefHeight="40.0" prefWidth="50.0" text="C">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+            <Button layoutX="147.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetNumbers" prefHeight="40.0" prefWidth="50.0" text="AC">
+               <font>
+                  <Font name="BM DoHyeon" size="12.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Label prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #485E6C;" text=" 체크인 취소 화면" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

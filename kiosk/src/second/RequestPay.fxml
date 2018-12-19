@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="second.PaymentController">
+   <children>
+      <Label fx:id="req_pay" alignment="CENTER" layoutX="35.0" layoutY="88.0" prefHeight="41.0" prefWidth="530.0" text="결제 진행 중입니다!" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="218.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
