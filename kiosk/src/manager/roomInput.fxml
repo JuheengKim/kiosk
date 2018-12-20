@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: rosyBrown;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.RoomManagementController">
+   <children>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <Label contentDisplay="TOP" layoutX="470.0" layoutY="155.0" prefHeight="56.0" prefWidth="485.0" text=" 방 번호" textAlignment="CENTER">
+      	<font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="TOP" layoutX="470.0" layoutY="246.0" prefHeight="48.0" prefWidth="485.0" text="   타입" textAlignment="CENTER">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roomNum" alignment="CENTER" layoutX="573.0" layoutY="154.0" prefHeight="47.0" prefWidth="381.0">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="427.0" layoutY="-7.0" prefHeight="95.0" prefWidth="571.0" text="방 등록" textFill="WHITE">
+         <font>
+            <Font name="BM DoHyeon" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="58.0" layoutX="1121.0" layoutY="728.0" onMouseClicked="#backMain" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/icon/home.png" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="800.0" prefWidth="238.0" style="-fx-background-color: #485E6C;">
+         <children>
+            <Button layoutY="113.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="현황 리스트" />
+            <Button layoutY="175.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="Room 관리" />
+         </children>
+      </Pane>
+      <MenuButton fx:id="sel" layoutX="573.0" layoutY="246.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="381.0" text="선택해 주세요!">
+        <items>
+          <MenuItem fx:id="sel_0" mnemonicParsing="true" text="싱글룸" />
+          <MenuItem fx:id="sel_1" mnemonicParsing="true" text="더블룸" />
+            <MenuItem fx:id="sel_2" mnemonicParsing="true" text="패밀리룸" />
+            <MenuItem fx:id="sel_3" mnemonicParsing="true" text="스위트룸" />
+        </items>
+      </MenuButton>
+      <Label contentDisplay="TOP" layoutX="470.0" layoutY="341.0" prefHeight="56.0" prefWidth="485.0" text="   단가" textAlignment="CENTER">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="price" alignment="CENTER" layoutX="573.0" layoutY="340.0" prefHeight="48.0" prefWidth="381.0">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </TextField>
+      <Button layoutX="613.0" layoutY="667.0" mnemonicParsing="false" onAction="#insertRoom" prefHeight="48.0" prefWidth="161.0" text="등록" />
+      <Label contentDisplay="TOP" layoutX="470.0" layoutY="430.0" prefHeight="196.0" prefWidth="485.0" style="-fx-background-color: beige;" text="  이미지" textAlignment="CENTER">
+         <font>
+            <Font name="BM DoHyeon" size="25.0" />
+         </font>
+      </Label>
+      
+      <ImageView fx:id="roomImage" fitHeight="196.0" fitWidth="278.0" layoutX="574.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="849.0" layoutY="579.0" mnemonicParsing="false" onAction="#choseFile" prefHeight="40.0" prefWidth="98.0" text="파일 찾기" />
+   </children>
+</Pane>

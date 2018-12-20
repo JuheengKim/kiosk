@@ -12,7 +12,7 @@
       <Pane prefHeight="800.0" prefWidth="238.0" style="-fx-background-color: #485E6C;">
          <children>
             <Button layoutY="113.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="현황 리스트" />
-            <Button layoutY="175.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="Room 관리" />
+            <Button layoutY="175.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="방 관리" />
             <ImageView fitHeight="64.0" fitWidth="58.0" layoutX="8.0" layoutY="731.0" onMouseClicked="#backMain" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../resource/icon/home.png" />
@@ -31,5 +31,6 @@
             <TableColumn fx:id="cleanColumn" prefWidth="75.0" text="청소쓰?" />
         </columns>
       </TableView>
+      <Button onAction="#roomInputForm" layoutX="1072.0" layoutY="126.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" text="방 등록" />
    </children>
 </Pane>

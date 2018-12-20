@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: rosyBrown;" stylesheets="@../second/sy.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.LoginController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: rosyBrown;" stylesheets="@../second/sy.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.StatusController">
    <children>
       <Pane prefHeight="800.0" prefWidth="238.0" style="-fx-background-color: #485E6C;">
          <children>
-            <Button layoutY="113.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="현황 리스트" />
-            <Button layoutY="175.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="Room 관리" />
+            <Button layoutY="119.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="현황 리스트" />
+            <Button layoutY="249.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="Room 관리" />
             <ImageView fitHeight="64.0" fitWidth="58.0" layoutX="8.0" layoutY="731.0" onMouseClicked="#backMain" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../resource/icon/home.png" />
                </image>
             </ImageView>
+            <Button layoutY="184.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" text="매출" />
          </children>
       </Pane>
-      <TableView layoutX="249.0" layoutY="179.0" prefHeight="599.0" prefWidth="937.0">
+      <TableView fx:id="table" layoutX="249.0" layoutY="179.0" prefHeight="599.0" prefWidth="937.0">
         <columns>
-            <TableColumn prefWidth="75.0" />
-          <TableColumn prefWidth="75.0" text="방 번호" />
-          <TableColumn prefWidth="75.0" text="타입" />
-            <TableColumn prefWidth="75.0" text="키번호" />
-            <TableColumn prefWidth="75.0" text="단가" />
-            <TableColumn prefWidth="75.0" text="비엇?" />
-            <TableColumn prefWidth="75.0" text="청소쓰?" />
+          <TableColumn fx:id="roomNumCol" prefWidth="75.0" text="방 번호" />
+          <TableColumn fx:id="periodCol" prefWidth="75.0" text="기간" />
+            <TableColumn fx:id="uNameCol" prefWidth="75.0" text="고객명" />
+            <TableColumn fx:id="statusCol" prefWidth="75.0" text="상태" />
+            <TableColumn fx:id="numberOfCol" prefWidth="75.0" text="인원" />
         </columns>
       </TableView>
+      <MenuButton layoutX="249.0" layoutY="147.0" mnemonicParsing="false" text="전체">
+        <items>
+          <MenuItem mnemonicParsing="false" text="입실" />
+          <MenuItem mnemonicParsing="false" text="취소" />
+            <MenuItem mnemonicParsing="false" text="체크아웃" />
+        </items>
+      </MenuButton>
    </children>
 </Pane>

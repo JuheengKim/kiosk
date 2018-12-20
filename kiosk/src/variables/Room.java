@@ -21,14 +21,14 @@ public class Room extends RecursiveTreeObject<Room> {
 	public String imageName;
 	public Image img;
 	
-	//JFXTREE 쓰려고
+	//tableview 쓰려고
 	public StringProperty roomNum_;
 	public StringProperty roomType_;
 	public StringProperty keyPasswd_;
 	public StringProperty price_;
 	public StringProperty isOccupied_;
 	public StringProperty isCleaned_;
-	public ObjectProperty image_;
+	public Image image_;
 	
 	public Room(int roomNum, int roomType, int keyPasswd, int price, boolean isOccupied, boolean isCleaned, boolean isSelected, String imageName) {
 		this.roomNum = roomNum;
@@ -48,7 +48,7 @@ public class Room extends RecursiveTreeObject<Room> {
 		this.price_ = new SimpleStringProperty(price);
 		this.isOccupied_ = new SimpleStringProperty(isOccupied);
 		this.isCleaned_ = new SimpleStringProperty(isCleaned);
-		this.image_ = new SimpleObjectProperty<>(image);
+		this.image_ = image;
 	}
 
 	public int getRoomNum() {
@@ -184,12 +184,12 @@ public class Room extends RecursiveTreeObject<Room> {
 	}
 
 
-	public ObjectProperty getImage_() {
+	public Image getImage_() {
 		return image_;
 	}
 
 
-	public void setImage_(ObjectProperty image_) {
+	public void setImage_(Image image_) {
 		this.image_ = image_;
 	}
 
