@@ -123,7 +123,7 @@ public class RoomListController{
     	oblist = FXCollections.observableArrayList();
     	
     	try {
-    		String sql = "SELECT roomNum, roomType, keyPasswd, price, isOccupied, isCleaned, isSelected, imageName FROM Room WHERE roomType IN (" + roomType + ")";      
+    		String sql = "SELECT roomNum, roomType, keyPasswd, price, isOccupied, isCleaned, isSelected, imageName FROM room WHERE roomType IN (" + roomType + ")";      
     		
     		preparedStatement = connection.prepareStatement(sql);
     		resultSet = preparedStatement.executeQuery();
@@ -241,6 +241,7 @@ public class RoomListController{
     	   file = new File("resource/room/no_image.png");
        }
        Image image = new Image(file.toURI().toString(), 280, 250, false, false);
+       System.out.println(file.toURI().toString() + "!!");
        v.getChildren().add(new ImageView(image));
        v.getChildren().add(new Label(room.getRoomNum() + " È£"));
        v.getChildren().add(new Label(formatter.format(room.getPrice()) + " ¿ø"));
